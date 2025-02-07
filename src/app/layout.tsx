@@ -10,6 +10,7 @@ import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import { Header } from "@/components/Header";
 
 const primary = Inter({
   variable: "--font-primary",
@@ -171,7 +172,21 @@ export default function RootLayout({
               opacity: effects.lines.opacity as any,
             }}
           />
-          {children}
+          <Flex fillWidth minHeight="16"></Flex>
+          <Header />
+          <Flex
+            position="relative"
+            zIndex={0}
+            fillWidth
+            paddingY="l"
+            paddingX="l"
+            horizontal="center"
+            flex={1}
+          >
+            <Flex horizontal="center" fillWidth minHeight="0">
+              {children}
+            </Flex>
+          </Flex>
         </Column>
       </ToastProvider>
     </Flex>

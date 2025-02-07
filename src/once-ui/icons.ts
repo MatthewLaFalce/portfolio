@@ -28,6 +28,7 @@ import {
   HiCheckCircle,
   HiOutlineShieldCheck,
   HiOutlineSparkles,
+  HiMiniGlobeAsiaAustralia,
 } from "react-icons/hi2";
 
 import { PiHouseDuotone } from "react-icons/pi";
@@ -68,5 +69,6 @@ export const iconLibrary: Record<string, IconType> = {
   visa: RiVisaLine,
   security: HiOutlineShieldCheck,
   sparkle: HiOutlineSparkles,
-  home: PiHouseDuotone
+  home: PiHouseDuotone,
+  globe: HiMiniGlobeAsiaAustralia,
 };

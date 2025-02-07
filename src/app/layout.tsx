@@ -6,11 +6,14 @@ import { headers } from "next/headers";
 import { Metadata } from "next";
 
 import { baseURL, style, meta, og, schema, social, effects } from "@/once-ui/resources/config";
-import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import { Background, Column, Fade, Flex, ToastProvider } from "@/once-ui/components";
 
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
+import CenterLeftNeutralBackground from "@/components/CenterLeftNeutralBackground";
+import CenterToTopRightAccentBackground from "@/components/CenterToTopRightAccentBackground";
+import CenterToTopRightBrandBackground from "@/components/CenterToTopRightBrandBackground";
 
 const primary = Inter({
   variable: "--font-primary",
@@ -185,7 +188,46 @@ export default function RootLayout({
             flex={1}
           >
             <Flex horizontal="center" fillWidth minHeight="0">
-              {children}
+              <Column fillWidth paddingY="80" paddingX="s" horizontal="center" flex={1}>
+                  <Fade
+                zIndex={3}
+                pattern={{
+                  display: true,
+                  size: "4",
+                }}
+                position="fixed"
+                top="0"
+                left="0"
+                to="bottom"
+                height={5}
+                fillWidth
+                blur={0.25}
+              />
+              <Column
+                overflow="hidden"
+                as="main"
+                maxWidth="l"
+                position="relative"
+                radius="xl"
+                horizontal="center"
+                border="neutral-alpha-weak"
+                fillWidth
+              >
+                <Column
+                  fillWidth
+                  horizontal="center"
+                  gap="48"
+                  radius="xl"
+                  paddingTop="80"
+                  position="relative"
+                >
+                  <CenterLeftNeutralBackground />
+                  <CenterToTopRightAccentBackground />
+                  <CenterToTopRightBrandBackground />
+                    {children}
+                  </Column>
+                </Column>
+              </Column>
             </Flex>
           </Flex>
         </Column>

@@ -141,7 +141,7 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  icon: "book",
+  icon: "coffee",
   username: "matthewlafalce", // Your username on Dev.to
 };
 

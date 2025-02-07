@@ -31,11 +31,15 @@ import {
   HiMiniGlobeAsiaAustralia,
 } from "react-icons/hi2";
 
-import { PiBookBookmark, PiHourglass, PiHouseDuotone, PiLegoSmiley, PiLinkedinLogo, PiTag, PiThumbsUp } from "react-icons/pi";
+import { PiBookBookmark, PiCoffee, PiHourglass, PiHouseDuotone, PiLegoSmiley, PiLinkedinLogo, PiTag, PiThumbsUp } from "react-icons/pi";
 
 import { RiVisaLine } from "react-icons/ri";
 
-import { FaDiscord, FaGithub, FaGoogle } from "react-icons/fa6";
+import { FaAws, FaDiscord, FaDocker, FaGithub, FaGolang, FaGoogle } from "react-icons/fa6";
+import { SiRubyonrails } from "react-icons/si";
+import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
+import { FaDigitalOcean, FaLinux } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
@@ -76,5 +80,15 @@ export const iconLibrary: Record<string, IconType> = {
   like: PiThumbsUp,
   tag: PiTag,
   glasses: PiHourglass,
-  linkedin: PiLinkedinLogo
+  linkedin: PiLinkedinLogo,
+  rails: SiRubyonrails,
+  golang: FaGolang,
+  nextjs: TbBrandNextjs,
+  tailwind: TbBrandTailwind,
+  docker: FaDocker,
+  coffee: PiCoffee,
+  aws: FaAws,
+  linux: FaLinux,
+  digitalocean: FaDigitalOcean,
+  postgresql: BiLogoPostgresql,
 };

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'build',
   sassOptions: {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],

@@ -110,6 +110,7 @@ export default function RootLayout({
       data-surface={style.surface}
       data-transition={style.transition}
       data-scaling={style.scaling}
+      suppressHydrationWarning
       className={classNames(
         primary.variable,
         code.variable,

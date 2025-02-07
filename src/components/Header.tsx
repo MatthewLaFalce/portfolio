@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-import { about } from "@/app/resources/content";
+import { about, blog } from "@/app/resources/content";
 
 import { Fade, Flex, Line, StyleOverlay, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
@@ -82,20 +82,35 @@ export const Header = () => {
               <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               <Line vert maxHeight="24" />
               <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="person"
-                    href="/about"
-                    label={about.label}
-                    selected={pathname === "/about"}
-                  />
-                  <ToggleButton
-                    className="s-flex-show"
-                    prefixIcon="person"
-                    href="/about"
-                    selected={pathname === "/about"}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon={about.icon}
+                  href="/about"
+                  label={about.label}
+                  selected={pathname === "/about"}
+                />
+                <ToggleButton
+                  className="s-flex-show"
+                  prefixIcon={about.icon}
+                  href="/about"
+                  selected={pathname === "/about"}
+                />
+              </>
+              <>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon={blog.icon}
+                  href="/blog"
+                  label={blog.label}
+                  selected={pathname === "/blog"}
+                />
+                <ToggleButton
+                  className="s-flex-show"
+                  prefixIcon={blog.icon}
+                  href="/blog"
+                  selected={pathname === "/blog"}
+                />
+              </>
 
 
             </Flex>

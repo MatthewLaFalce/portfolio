@@ -10,7 +10,7 @@ import {
   Tag,
   Text,
 } from "@/once-ui/components";
-import { JSX } from "react";
+import React, { JSX } from "react";
 import { baseURL } from "@/once-ui/resources/config";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
@@ -154,7 +154,7 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <>
+                        <React.Fragment key={item.name}>
                             <Button
                                 className="s-flex-hide"
                                 key={item.name}
@@ -172,7 +172,7 @@ export default function About() {
                                 icon={item.icon}
                                 variant="secondary"
                             />
-                        </>
+                        </React.Fragment>
                     ),
                 )}
               </Flex>
@@ -209,7 +209,7 @@ export default function About() {
                         <Text
                           as="li"
                           variant="body-default-m"
-                          key={`${experience.company}-${index}`}
+                          key={`${experience.company}-achievement-${index}`}
                         >
                           {achievement}
                         </Text>
@@ -219,7 +219,7 @@ export default function About() {
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (
                           <Flex
-                            key={index}
+                            key={`${experience.company}-image-${index}`}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
@@ -288,7 +288,7 @@ export default function About() {
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
                           <Flex
-                            key={index}
+                            key={`skillimage-${index}`}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore

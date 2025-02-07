@@ -31,7 +31,7 @@ import {
   HiMiniGlobeAsiaAustralia,
 } from "react-icons/hi2";
 
-import { PiHouseDuotone } from "react-icons/pi";
+import { PiBookBookmark, PiHourglass, PiHouseDuotone, PiLegoSmiley, PiLinkedinLogo, PiTag, PiThumbsUp } from "react-icons/pi";
 
 import { RiVisaLine } from "react-icons/ri";
 
@@ -71,4 +71,10 @@ export const iconLibrary: Record<string, IconType> = {
   sparkle: HiOutlineSparkles,
   home: PiHouseDuotone,
   globe: HiMiniGlobeAsiaAustralia,
+  book: PiBookBookmark,
+  lego: PiLegoSmiley,
+  like: PiThumbsUp,
+  tag: PiTag,
+  glasses: PiHourglass,
+  linkedin: PiLinkedinLogo
 };

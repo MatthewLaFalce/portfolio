@@ -24,6 +24,7 @@ const about = {
   label: "About",
   title: "About me",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  icon: "lego",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -136,4 +137,12 @@ const social = [
   },
 ];
 
-export { person, home, about, social };
+const blog = {
+  label: "Blog",
+  title: "Writing about design and tech...",
+  description: `Read what ${person.name} has been up to recently`,
+  icon: "book",
+  username: "matthewlafalce", // Your username on Dev.to
+};
+
+export { person, home, about, social, blog };

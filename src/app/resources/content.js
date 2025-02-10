@@ -17,7 +17,7 @@ const home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Software Engineer</>,
-  subline: <>I'm {person.firstName}, a {person.role} at <InlineCode>WinePOS</InlineCode>, where I craft intuitive<br /> user experiences. After hours, I build my own projects.</>
+  subline: <>I&apos;m {person.firstName}, a {person.role} at <InlineCode>WinePOS</InlineCode>, where I craft intuitive<br /> user experiences. After hours, I build my own projects.</>
 };
 
 const about = {
@@ -60,7 +60,7 @@ const about = {
             point for managing data across all merchants.
           </>,
           <>
-            Reimplemented the company's ETL pipeline, reducing maintenance tasks by 50% and
+            Reimplemented the company&apos;s ETL pipeline, reducing maintenance tasks by 50% and
             added a user-friendly interface, allowing non-technical employees to manage data
             integration through configurable mappings, scheduling, and error handling.
           </>,

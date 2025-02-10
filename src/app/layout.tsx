@@ -2,10 +2,9 @@ import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
-import { headers } from "next/headers";
 import { Metadata } from "next";
 
-import { baseURL, style, meta, og, schema, social, effects } from "@/once-ui/resources/config";
+import { baseURL, style, meta, og, effects } from "@/once-ui/resources/config";
 import { Background, Column, Fade, Flex, ToastProvider } from "@/once-ui/components";
 
 import { Inter } from "next/font/google";

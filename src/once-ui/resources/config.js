@@ -65,4 +65,4 @@ const effects = {
   },
 };
 
-export { baseURL, style, meta, og, schema, social, effects };
+export { baseURL, style, meta, og, effects };

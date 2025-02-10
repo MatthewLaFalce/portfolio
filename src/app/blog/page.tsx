@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { blog } from "../resources/content";
-import { Avatar, Button, Card, Column, Icon, Line, Row, SmartImage, SmartLink, Text } from "@/once-ui/components";
+import { Card, Column, Icon, Line, Row, SmartImage, SmartLink, Text } from "@/once-ui/components";
+
+export const dynamic = "force-dynamic";
 
 interface Article {
   id: number;
@@ -22,28 +24,39 @@ interface Article {
 
 export default function Blog() {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const response = await fetch(
-          `https://dev.to/api/articles?username=${blog.username}`
-        );
+        const response = await fetch(`https://dev.to/api/articles?username=${blog.username}`, {
+          cache: "no-store", // Prevent Next.js from caching the request
+        });
+        if (!response.ok) {
+          throw new Error("Failed to fetch");
+        }
         const data = await response.json();
         setArticles(data);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
+      } catch (err) {
+        setError("Error fetching articles.");
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchArticles();
   }, []);
 
+  if (loading) return <div className="text-center">Loading...</div>;
+  if (error) return <div className="text-center text-red-500">{error}</div>;
+
+
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6 text-center">Blog Articles</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article) => (
+        {articles.map((article: Article) => (
           <Card
           maxWidth="s"
           radius="l-4"

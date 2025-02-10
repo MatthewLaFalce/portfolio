@@ -41,8 +41,7 @@ const tertiary: FontConfig | undefined = undefined;
  */
 
 export async function generateMetadata(): Promise<Metadata> {
-  const host = (await headers()).get("host");
-  const metadataBase = host ? new URL(`https://${host}`) : undefined;
+  const metadataBase = new URL(`https://${baseURL}`);
 
   return {
     title: meta.title,

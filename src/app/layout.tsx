@@ -80,17 +80,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": schema.type,
-  url: "https://" + baseURL,
-  logo: schema.logo,
-  name: schema.name,
-  description: schema.description,
-  email: schema.email,
-  sameAs: Object.values(social).filter(Boolean),
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -121,12 +110,6 @@ export default function RootLayout({
       )}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaData),
-          }}
-        />
       </head>
       <ToastProvider>
         <Column as="body" fillWidth  margin="0" padding="0">

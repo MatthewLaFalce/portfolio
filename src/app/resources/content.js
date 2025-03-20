@@ -70,6 +70,30 @@ const about = {
             details. The system extracts, validates, and standardizes data, improving accuracy
             and efficiency.
           </>,
+          <>
+            Led a team in redesigning and implementing the company's mobile application,
+            modernizing the user experience and improving performance. Introduced a scalable
+            architecture, enhanced security, and integrated new features to streamline merchant
+            operations, resulting in increased adoption and user satisfaction.
+          </>,
+          <>
+            Integrated with third-party APIs, including Postmates, Salesforce, and Datacap, to
+            enhance platform capabilities and automate workflows. Developed robust API connectors
+            and data synchronization processes, enabling seamless communication between systems,
+            improving operational efficiency, and expanding business opportunities.
+          </>,
+          <>
+            Managed the company's remote access platform, enabling merchants to securely access
+            reporting and inventory management tools from anywhere. Designed and maintained a scalable
+            infrastructure that ensures real-time data availability, allowing business owners to run
+            their operations efficiently from home or on the go.
+          </>,
+          <>
+            Oversaw the maintenance of the company's eCommerce order importing platform, enabling
+            seamless integration with third-party eCommerce providers. This system allows order data
+            to be automatically imported into the merchant inventory system in real time, ensuring data
+            consistency, reducing manual entry, and improving order fulfillment efficiency.
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images

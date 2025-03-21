@@ -71,7 +71,7 @@ const about = {
             and efficiency.
           </>,
           <>
-            Led a team in redesigning and implementing the company's mobile application,
+            Led a team in redesigning and implementing the company&apos;s mobile application,
             modernizing the user experience and improving performance. Introduced a scalable
             architecture, enhanced security, and integrated new features to streamline merchant
             operations, resulting in increased adoption and user satisfaction.
@@ -83,13 +83,13 @@ const about = {
             improving operational efficiency, and expanding business opportunities.
           </>,
           <>
-            Managed the company's remote access platform, enabling merchants to securely access
+            Managed the company&apos;s remote access platform, enabling merchants to securely access
             reporting and inventory management tools from anywhere. Designed and maintained a scalable
             infrastructure that ensures real-time data availability, allowing business owners to run
             their operations efficiently from home or on the go.
           </>,
           <>
-            Oversaw the maintenance of the company's eCommerce order importing platform, enabling
+            Oversaw the maintenance of the company&apos;s eCommerce order importing platform, enabling
             seamless integration with third-party eCommerce providers. This system allows order data
             to be automatically imported into the merchant inventory system in real time, ensuring data
             consistency, reducing manual entry, and improving order fulfillment efficiency.
